@@ -1,2 +1,3 @@
 # GIT_Repository
- Passos e Comandos para repositorios GIT
+ Repositorio criado para lembrar Passos e Comandos para uso em repositorios GIT
+ 
