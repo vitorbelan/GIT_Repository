@@ -1,0 +1,20 @@
+criando via terminal
+
+git config --global user.name "nome do usuario"
+git config --global user.email "usuario@email.com"
+git config --global core.editor "seueditor"
+
+comandos para ver 
+git config user.name
+
+git config --list
+
+    para criar a pasta
+    cmd: mkdir nome_diretorio
+    
+    iniciazaliza o repositorio e verificar todas mudanças no diretorio
+    lembrar de ao usar o git init estar no diretorio
+    cmd: cd nome_diretorio
+    cmd: git init
+
+        lembrar de criar o Readme.md no repositorio
