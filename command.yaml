@@ -33,12 +33,25 @@ comandos para ver
     para criar a pasta
     cmd: mkdir nome_diretorio
     
-    iniciazaliza o repositorio e verificar todas mudanças no diretorio
-    lembrar de ao usar o git init estar no diretorio
+## Comando para iniciar/criar um repositoro
     cmd: cd nome_diretorio
     cmd: git init
-
+        iniciazaliza o repositorio e verificar todas mudanças no diretorio
+        lembrar de ao usar o git init estar no diretorio
         lembrar de criar o Readme.md no repositorio
+    cmd: git add README.md
+    cmd: git commit -m "descricao do commit"
+    cmd: git remote add origin git@github.com:usuarionogithub/nome_repositorio.git
+    cmd: git push -u origin master
+
+## ou envair um repositorio ja existente
+    cmd: git remote add origin git@github.com:usuarionogithub/nome_repositorio.git
+    cmd: git push -u origin master
+
+    cmd: git remote
+    cmd: git remote -v
+
+    
 
 # visualizando os logs de um commit (ver historico de versoes, altercao do arquivo)
 
