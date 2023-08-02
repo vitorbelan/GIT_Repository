@@ -8,12 +8,12 @@ instalando git via terminal no linux
 
 criando via terminal
 
-git config --global user.name "nome do usuario"
-git config --global user.email "usuario@email.com"
-git config --global core.editor "seueditor"
+    cmd: git config --global user.name "nome do usuario"
+    cmd: git config --global user.email "usuario@email.com"
+    cmd: git config --global core.editor "seueditor"
 
 comandos para ver 
-git config user.name
+    cmd: git config user.name
 
 ## Ciclo de vida dos status do arquivo
     untracked   -> arquivo acabou de ser adicionado no repositorio mas ainda náo visto pelo git, ou seja o git ainda náo conhece a existencia do arquivo dentro do repositório
@@ -21,10 +21,14 @@ git config user.name
     modified    -> arquivo modificado
     staged      -> momento que o arquivo fica em standby esperando a versáo ser fechada quando se cria o commit todos os arquivos viram modified
 
+    sequencia 
+    cmd: git add
+    cmd: git commit e suas variacoes
+    cmd: git commit -am                     ::::>>> ja adiciona todos arquvios junto com o comentario
 ## git status serve para dar o status
-        git status
+    cmd: git status
 
-git config --list
+    cmd: git config --list
 
     para criar a pasta
     cmd: mkdir nome_diretorio
@@ -35,3 +39,32 @@ git config --list
     cmd: git init
 
         lembrar de criar o Readme.md no repositorio
+
+# visualizando os logs de um commit (ver historico de versoes, altercao do arquivo)
+
+    cmd: git log                            ::::>>> mostra a hash do commit (identificaçao) ,Autor e  ,Data
+    cmd: git log --decorate                 ::::>>> mostra origem e destino do commit e outras cositas mas
+    cmd: git log --author="nome_do_autor"   ::::>>> busca todos commits feito por um autor que contenha palavra dentro das aspas 
+    cmd: git shortlog                       ::::>>> mostra em ordem alfabetica os autores, commits feitos e quantos fizeram
+    cmd: git shortlog -sn                   ::::>>> mostra só as pessoas e qtd de commits
+    cmd: git log --graph                    ::::>>> mostra em forma gráfica o que acontece com as branches e versöes
+
+    pegando a hash do commit e usando o cmd git show podemos ver o que foi adicionado na branch
+
+    cmd: git show numero_da_hash_de_identificacao_do_commit
+
+# visualizando as diferenças antes de commit uma branch
+
+    cmd: git diff                          ::::>>> mostra as alterçoes feita na branch
+    cmd: git diff --name-only              ::::>>> motra só os nomes dos arquivos que sofreram alteraçoes
+
+# resetar os erros
+
+    cmd: git checkout nome_arquivo         ::::>>> retorna as alteraçoes feita nesse arquivo para antes da ediçao enquanto o arqv esta em edicao
+    cmd: git reset HEAD nome_arquivo       ::::>>> retorna o arquivo que esta na fila do stage (momento depois do git add . e antes do git commit)
+    cmd: git reset --soft hash_do_comit_ant :::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e deixa pronto para um novo commit (deixa o arquivo depois do git add)
+    cmd: git reset --mixed hash_do_comit_ant :::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e (deixa o arquivo antes do git add)
+    cmd: git reset --hard hash_do_comit_ant :::>>> desfaz o commit e as alteracoes feita no arquivo
+
+
+
