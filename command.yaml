@@ -5,7 +5,7 @@ atulize o sistema(se necessario)
 instalando git via terminal no linux
     cmd: sudo apt install git -y
     cmd: git --version (verifcando a versao do git)
-    
+
 criando via terminal
 
 git config --global user.name "nome do usuario"
@@ -14,6 +14,15 @@ git config --global core.editor "seueditor"
 
 comandos para ver 
 git config user.name
+
+## Ciclo de vida dos status do arquivo
+    untracked   -> arquivo acabou de ser adicionado no repositorio mas ainda náo visto pelo git, ou seja o git ainda náo conhece a existencia do arquivo dentro do repositório
+    unmodified  -> arquivo adicionado ao git mas ainda nao modificado
+    modified    -> arquivo modificado
+    staged      -> momento que o arquivo fica em standby esperando a versáo ser fechada quando se cria o commit todos os arquivos viram modified
+
+## git status serve para dar o status
+        git status
 
 git config --list
 
