@@ -1,3 +1,11 @@
+atulize o sistema(se necessario)    
+    cmd: sudo apt update
+    cmd: sudo apt upgrade -y
+
+instalando git via terminal no linux
+    cmd: sudo apt install git -y
+    cmd: git --version (verifcando a versao do git)
+    
 criando via terminal
 
 git config --global user.name "nome do usuario"
