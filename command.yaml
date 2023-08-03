@@ -79,5 +79,19 @@ comandos para ver
     cmd: git reset --mixed hash_do_comit_ant :::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e (deixa o arquivo antes do git add)
     cmd: git reset --hard hash_do_comit_ant :::>>> desfaz o commit e as alteracoes feita no arquivo
 
+# criando chave SSH para o github
+    caso necessario gerar a chave ssh para conectar com github
 
+        1 - abrir o terminal
+            - ir para o home no diretorio de onde ficam as chaves ssh
+            cmd: cd ~/.ssh/
+            cmd: cat id_rsa.pub
+            
+        2- $ ssh-keygen -t rsa -b 4096 - C 
 
+#subindo para repositorio remoto
+
+    cmd: git commit -am
+    ou se quiser adicionar arquivo em especicio
+    cmd: git add "nome_do_arquivo"
+    cmd: git push origin "branch_em que esta"
