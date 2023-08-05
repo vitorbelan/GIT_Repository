@@ -124,3 +124,16 @@ comandos para ver
 
     cmd: git checkout nome_da_branch # altero para a branch de nome nome_da_branch
     cmd: git branch -D nome_da_branch # deleto a branch nome_da_branch
+
+# Unindo branch
+    merge #basicamente ele cria um commit por tras dos panos para unir as ramificaçoes nabranch principal
+        pro:    operacao nao destrutiva; nao destroi commit, na verdade cria um novo commit para juntar tudo
+        con:    cria um commit extra; somente para juntar coisas
+                deixa o historico poluído
+
+    rebase  # basicamente ele nao cria umm commit juntando as alteracoes da master com a branch ele joga a branch na frente  
+            # e aí tanto a branch que ja olhava  tanto quanto a master vao estar olhando para a branch a frente
+        pro: mantem uma linearidade, nao cria commit extras para juntar tudo
+        con: perde a ordem cronologica, pois ao usar o rebase  voce nao sabe em que momento ele foi criado se antes ou depois de uma determinada
+             branch ele simmplesmente vai para a frente, ele muda o histórico. podendo vir a gerar conflito. caso uma pessoa esteja trabalhando no mesmo branch
+             muito bom para trazer a branch master para a máquina para evitar de fazer uma alteraçao na master antiga cmd: git pull --rebase
