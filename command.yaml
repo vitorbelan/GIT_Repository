@@ -91,7 +91,36 @@ comandos para ver
 
 #subindo para repositorio remoto
 
-    cmd: git commit -am
+    cmd: git commit -am "comentario da branch"
     ou se quiser adicionar arquivo em especicio
-    cmd: git add "nome_do_arquivo"
-    cmd: git push origin "branch_em que esta"
+        cmd: git add "nome_do_arquivo"
+        cmd: git push origin "branch_em que esta"
+    
+    cmd: git push origin "branch_a_subir"
+
+# clonando um repositório remotor
+
+    use o endereço do repositorio ou ssh ou https
+    cmd: git clone https://link_do_seu_git nome_do_repositorio_clonado #vai criar uma pasta com o nome "nome_do_repositorio_clonado"
+
+
+#criando fork de um projeto
+    copia um projeto nao sendo de sua autoria, onde voce deseja contribuir para o projeto daí realiza a alteraçao e envia uma Pull Request para o dono
+    é diferente do clone pois só conseguimos fazer alteraçoes no repositorio que somos "dono" ou que temos autorizaçao pra isso, onde nao vamos conseguir
+    solicitar e fazer PRs, ja num fork poderemos fazer alteraçoes e solicitar PR para o owner 
+
+# O que é um Branch
+    é um ponteiro móvel que leva o commit
+    pq usar?    modificar os arquivos sem alterar a master
+                facil de deletar 
+                multiplas pessoas trabalhando ao mesmo tempo
+                evita conflitos
+
+# criando uma branch
+    cmd: git checkout -b nome_da_branch # cria a branch com o nome: nome_da_branch
+    cmd: git branch # lsita as branch existentes e com um asteritico do lado a que voce está
+
+#navengando entre as branchs e deletando
+
+    cmd: git checkout nome_da_branch # altero para a branch de nome nome_da_branch
+    cmd: git branch -D nome_da_branch # deleto a branch nome_da_branch
