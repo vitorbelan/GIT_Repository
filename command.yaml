@@ -76,7 +76,7 @@ comandos para ver
     cmd: git checkout nome_arquivo         ::::>>> retorna as alteraçoes feita nesse arquivo para antes da ediçao enquanto o arqv esta em edicao
     cmd: git reset HEAD nome_arquivo       ::::>>> retorna o arquivo que esta na fila do stage (momento depois do git add . e antes do git commit)
     cmd: git reset --soft hash_do_comit_ant :::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e deixa pronto para um novo commit (deixa o arquivo depois do git add)
-    cmd: git reset --mixed hash_do_comit_ant :::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e (deixa o arquivo antes do git add)
+    cmd: git reset --mixed hash_do_comit_ant ::>>> desfaz o commit feito e mantem as alteraçoes no arquivo e (deixa o arquivo antes do git add)
     cmd: git reset --hard hash_do_comit_ant :::>>> desfaz o commit e as alteracoes feita no arquivo
 
 # criando chave SSH para o github
@@ -159,4 +159,16 @@ comandos para ver
     git config --global alias.s status
 
 # criando tags
-    
+    pode ser usado para varias situaçoes dentro do códgio dentre elas o versionamento
+
+    cmd: git tag -a nome_da_tag -m "descricao-da_tag"
+     ex: git tag -a 0.0.0 -m "versao_0_do_codigo"
+    cmd: git push origin master --tags # sobe as tags para a master
+
+# git revert
+    cmd: git revert hash_do_commit
+        # o codigo desfaz as mudanças sem perder as alteraçoes feitas no código ele desfaz as alteraçoes e voce ainda consegue ver o commit com "erros"
+
+#apagando repositorio remoto
+    cmd: git tag -d nome_da_tag # apaga a tag no repositorio local
+    cmd: git push origin: nomeda_tag_a_ser_apagada
