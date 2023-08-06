@@ -146,3 +146,17 @@ comandos para ver
         dentro do gitingore posso ignoras:
             varios arquivos só pela extensao. #exe *.{nome_extensao} :::: *.json
             um unico arquivo. #norme_arquivo.nome da extensao :::: arqv.xls
+
+# GIT STASH
+    guarda modificaçöes nao comitadas em um arquivo em que possa chamar depois quando achar necessário
+    cmd: git stash          # salva as alteracoes para ir para outra branch
+    cmd: git stash apply    # aplica as alteracoes que foram salvas
+    cmd: git stash list     # lista todos stash que esteja sendo feito
+    cmd: git stash clear    # limpa tudo no stash
+
+# criando alias - atalhos dos comandos
+    git config --global alias.nome_do_atalho cmd_a_ser_substituido_pelo_atalho
+    git config --global alias.s status
+
+# criando tags
+    
