@@ -137,3 +137,12 @@ comandos para ver
         con: perde a ordem cronologica, pois ao usar o rebase  voce nao sabe em que momento ele foi criado se antes ou depois de uma determinada
              branch ele simmplesmente vai para a frente, ele muda o histórico. podendo vir a gerar conflito. caso uma pessoa esteja trabalhando no mesmo branch
              muito bom para trazer a branch master para a máquina para evitar de fazer uma alteraçao na master antiga cmd: git pull --rebase
+
+# GIT ignore
+    um arquivo no diretorio principal onde passamos alguns parametros e padroes que el enao utiliza
+
+    cmd: vi .gitignore #criando o arquivo git ignore
+        #adiciono dentro do gitignore todos arquivos que quero ignorar dentro do meu repositorio
+        dentro do gitingore posso ignoras:
+            varios arquivos só pela extensao. #exe *.{nome_extensao} :::: *.json
+            um unico arquivo. #norme_arquivo.nome da extensao :::: arqv.xls
